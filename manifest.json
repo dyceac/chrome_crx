@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "name": "GSN",
+    "version": "1.0.0",
+    "description": "Chrome扩展",
+    "icons":
+    {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    // 常驻的后台JS或后台页面
+    //"background": {
+     //  "scripts": ["js/background.js","js/jquery-2.1.1.min.js"]
+     //},
+    // 浏览器右上角图标设置，browser_action、page_action、app必须三选一
+    "browser_action":
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "GSN插件",
+        "default_popup": "popup.html"
+    },
+    // 当某些特定页面打开才显示的图标
+    
+    // 需要直接注入页面的JS
+    //"content_scripts": [
+     //   {
+    //        "matches": ["<all_urls>"],
+     //       "js": ["js/contents.js","js/jquery-2.1.1.min.js"],
+     //       "run_at": "document_start"
+     //   }
+    //],
+    // 权限申请
+    "permissions":
+    [
+        "contextMenus", // 右键菜单
+        "tabs", // 标签
+        "webNavigation",
+        "notifications", // 通知
+        "webRequest", // web请求
+        "webRequestBlocking",
+         "<all_urls>"
+        //"storage", // 插件本地存储
+        //"http://*/*", //
+        //"https://*/*" //
+    ]
+   
+}
